@@ -1,2 +1,0 @@
-# Conditional Random Field for Sequence Tagging
-For SEMEVAL 2020 Task 11, in order to create a baseline I created a CRF using sklearn-crf suite and tried out a few different optimization algorithms and engineered featurs. I used this baseline for my final MSc project. With the explosion of deep learning in the last few years it seems obvious to use an RNN and word embeddings. However I felt this was _too_ obvious so I wanted to see how far I could get using a CRF. What follows is the report I created. 
