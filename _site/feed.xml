@@ -1,4 +1,227 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-16T16:17:59-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Running with Hedgeclippers</title><subtitle>A website dedicated to adapting NLP techniques for the ever evolving needs of the modern world</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2019/12/07/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-12-07T17:39:29-05:00</published><updated>2019-12-07T17:39:29-05:00</updated><id>http://localhost:4000/jekyll/update/2019/12/07/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/12/07/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-06T21:21:43-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Running with Hedgeclippers</title><subtitle>A website dedicated to adapting NLP techniques for the ever evolving needs of the modern world</subtitle><entry><title type="html">LeetCode 30-Day Challenge Part 1</title><link href="http://localhost:4000/leetcode/2020/03/06/Text-Classification-Series-1.html" rel="alternate" type="text/html" title="LeetCode 30-Day Challenge Part 1" /><published>2020-03-06T00:00:00-05:00</published><updated>2020-03-06T00:00:00-05:00</updated><id>http://localhost:4000/leetcode/2020/03/06/Text-Classification-Series-1</id><content type="html" xml:base="http://localhost:4000/leetcode/2020/03/06/Text-Classification-Series-1.html">&lt;h1 id=&quot;leetcode-30-days-of-coding-part-1&quot;&gt;LeetCode 30 Days of Coding Part 1&lt;/h1&gt;
+&lt;h3 id=&quot;leetcode-recently-released-a-30-day-contest-for-completing-coding-challenges&quot;&gt;LeetCode recently released a 30 day contest for completing coding challenges&lt;/h3&gt;
+&lt;p&gt;While some of these challenges are just different iterations on common algorithms, I have found this particularly useful for testing out how I would solve these problems in different programming languages. For the most part these algorithms can be implemented in the same way across languages outside obvious language particular features. One of the cool things about this though is that sometimes you can gleam really interesting ways of tackling problems. I will be completing the entire 30 day challenge and use this series of blog posts to highlight some of the more interesting techniques. I will be completing the challenge in both python and c++. For python I am mostly looking at writing code in the most pythonic way I can. For c++ the focus will be on understanding the changes in speed and memory allocation across implementations.&lt;/p&gt;
+
+&lt;p&gt;Despite being challenging I think the study of algorithms is one of the most beautiful areas of research in computer science. If you understand algorithms well, it allows you as a programmer to leverage the resources you have to better suit your problems. One of the hallmarks of modern NLP and deep learning  is the massive amount of data required for creating models. The large amount of data and the size of your models can drastically slow down performance, so optimization is integral for research and even more important for putting models into production. There is a growing body of research around creating smaller models and using less data to create better systems. I hope some of the skills I curate during this challenge will help me on my journey as I learn to apply NLP in some more niche areas like embedded systems. Either way I am enjoying myself. Cheers.&lt;/p&gt;
+
+&lt;h2 id=&quot;challenge-1-single-number&quot;&gt;Challenge 1: Single Number&lt;/h2&gt;
+&lt;h3 id=&quot;bit-manipulation-in-c&quot;&gt;Bit Manipulation in C++&lt;/h3&gt;
+&lt;p&gt;One of the more interesting solutions I have come across in the LeetCode Challenge has been uses for bit manipulation. The XOR operator in c++ operates on bits. The XOR operator compares two bit values and returns 1 if either values are 1 but 0 if both values are one. We will see how this can be leverage to find a unique number in an array of numbders&lt;/p&gt;
+
+&lt;h4 id=&quot;challenge&quot;&gt;Challenge:&lt;/h4&gt;
+&lt;p&gt;Given a &lt;strong&gt;non-empty&lt;/strong&gt; array of integers, every element appears &lt;em&gt;twice&lt;/em&gt; except for one. Find that single one.&lt;/p&gt;
+
+&lt;h3 id=&quot;naive-solution&quot;&gt;Naive Solution&lt;/h3&gt;
+&lt;p&gt;The naive solution to this problem is pretty straight forward. You first initialize an unordered map and then iterate over the list. For each element in the array if the map contains the number as a key its value is incremented. At the end of the initial for-loop you then iterate over the map and find the key that only has a value of 1.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;vector&amp;gt;
+using namespace std;
+
+class NaiveSolution {
+public:
+    int singleNumber(vector&amp;lt;int&amp;gt;&amp;amp; nums) {
+        int n = nums.size();
+        unordered_map &amp;lt;int, int&amp;gt; count_map;
+        for (int i = 0; i &amp;lt; n; i++)
+            count_map[nums[i]]++;
+        for (int i = 0; i &amp;lt; n; i++)
+            if (count_map[nums[i]]==1)
+                return nums[i];
+                
+        return 0;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;xor-bit-manipulation-solution&quot;&gt;XOR Bit Manipulation Solution&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class BitWiseSolution {
+public:
+    int singleNumber(vector&amp;lt;int&amp;gt;&amp;amp; nums) {
+    int a = 0;
+    for (int i : nums) {
+        a ^= i;
+    }
+    return a;
+  }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;At first site one can see a few advantages in this solution. For one thing, no memory is allocated to create a map. Also, while both versions have O(n) runtime the XOR solution only uses a single loop. During the XOR operation each item in the list compared and the bit representation of &lt;strong&gt;a&lt;/strong&gt; is changed accordingly.&lt;/p&gt;
+
+&lt;p&gt;To understand what is going on let’s look at a toy example with the list [1,2,10,2,10].
+For each of the 5 iterations we will look at the value of 32-bit version of &lt;strong&gt;a&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Array Index&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;a&lt;/strong&gt; 32-Bit Value&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;a&lt;/strong&gt; Integer Value&lt;/th&gt;
+      &lt;th&gt;Array Value&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0000000000000001&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0000000000000011&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;0000000000001001&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;0000000000001011&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;0000000000000001&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;It is interesting to note though that there are problems with both versions, specifically in the case of having multiple unique numbers. The naive solution will return the first value in the map that only appears once, while the bitwise solution will return the XOR equivalent of the individual numbers with all the duplicates removed. This is why it is important to go through test cases to fully understand the behavior of your code. The Naive solution will always return at least one unique number but the bitwise will return whatever integer results from XOR operation.&lt;/p&gt;</content><author><name></name></author><summary type="html">LeetCode 30 Days of Coding Part 1 LeetCode recently released a 30 day contest for completing coding challenges While some of these challenges are just different iterations on common algorithms, I have found this particularly useful for testing out how I would solve these problems in different programming languages. For the most part these algorithms can be implemented in the same way across languages outside obvious language particular features. One of the cool things about this though is that sometimes you can gleam really interesting ways of tackling problems. I will be completing the entire 30 day challenge and use this series of blog posts to highlight some of the more interesting techniques. I will be completing the challenge in both python and c++. For python I am mostly looking at writing code in the most pythonic way I can. For c++ the focus will be on understanding the changes in speed and memory allocation across implementations.</summary></entry><entry><title type="html">Introduction to Probabilistic Models 1</title><link href="http://localhost:4000/math/2020/01/18/Probability-Chapter-1.html" rel="alternate" type="text/html" title="Introduction to Probabilistic Models 1" /><published>2020-01-18T08:49:00-05:00</published><updated>2020-01-18T08:49:00-05:00</updated><id>http://localhost:4000/math/2020/01/18/Probability-Chapter-1</id><content type="html" xml:base="http://localhost:4000/math/2020/01/18/Probability-Chapter-1.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;So what follows is the beginning of a series of posts I will be making while going through Sheldon Ross’s &lt;em&gt;Introduction to Probability Models 10ed.&lt;/em&gt;.
+Now that I have graduated I have a little more time to dedicate to topics that I find interesting. One of the topics I find most interesting is math, particularly probability, statistics, and how they can be used to model language. A lot of Ross’s book will be a review for me so I am hoping to hammer out some of the finer details that I may have missed when I first started studying probability.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-this-introduction-to-probability-models-&quot;&gt;Why this &lt;em&gt;Introduction to Probability Models&lt;/em&gt; ?&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;So I have been exposed to a lot of different materials with regard to math especially with regard to probability and statistics. I have read some of Jaynes _Probability Theory_, about half of McElreaths _Statistical Rethinking_, and been exposed to a variety of different books with regard to probability especially from the viewpoint of machine learning. I have chosen this book because A) I am looking for a book strictly about probability and B) so far Ross's book has been these most accessible. There seems to be little _fluff_ in this book. The topics are clearly outlined. The chapters are short and to the point. The exercises are illuminating. I am hoping to review a lot of topics and learn some new stuff along the way. If you are also following along, maybe you will too.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;chapter-1&quot;&gt;Chapter 1&lt;/h2&gt;
+&lt;p&gt;In chapter 1 we will be looking at the following topics:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Sample Spaces and Events&lt;/li&gt;
+  &lt;li&gt;Probabilities Defined on Events&lt;/li&gt;
+  &lt;li&gt;Conditional Probability&lt;/li&gt;
+  &lt;li&gt;Indepence&lt;/li&gt;
+  &lt;li&gt;Bayes’ Rule/Formula&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All of these topics are rather rudimentary so this discussion will be brief.&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-space-and-events&quot;&gt;Sample Space and Events&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A sample space can be defined as all of the outcomes that are possible given an experiment. If we are talking about a coin being flipped once then this &lt;em&gt;sample space&lt;/em&gt; can be defined as:
+&lt;script type=&quot;math/tex&quot;&gt;S=[H,T]&lt;/script&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;An event in this sample space (S), can be defined as any subset of the this sample space. In the easy case above there are only two events heads(H) or tails (T)&lt;/p&gt;
+
+&lt;p&gt;Now obviously this idea extends to anything. Often you will see examples looking at dice, cards, or jars of colored balls etc. If we have two coins and are flipping them each once or &lt;em&gt;one coin but flipping it twice&lt;/em&gt; then the sample space would be:
+S=[(H,H),(H,T),(T,H),(T,T)]&lt;/p&gt;
+
+&lt;p&gt;In this latter case then the set of events are simply the cartesian product of the outcomes of the two coins. Each of the combinations of heads and tails in the above example are events. If you are familiar with set theory the sample space can be defined as the cartesian product of the sets of events.&lt;/p&gt;
+
+&lt;h5 id=&quot;unions-and-intersections-of-events&quot;&gt;Unions and Intersections of events&lt;/h5&gt;
+&lt;p&gt;If we have multiple events often we want to talk about how these events occur and whether or not they occur together. For two separate events &lt;em&gt;A&lt;/em&gt; and &lt;em&gt;B&lt;/em&gt; we describe their &lt;em&gt;union&lt;/em&gt; as A or B occuring. As an example , if event &lt;em&gt;A&lt;/em&gt; is (H,H) and event &lt;em&gt;B&lt;/em&gt; is (H,T) then there union is the subset of S [(H,H), (H,T)]&lt;/p&gt;
+
+&lt;p&gt;UNION PIC&lt;/p&gt;
+
+&lt;p&gt;If &lt;em&gt;union&lt;/em&gt; can be described as &lt;em&gt;A or B occuring&lt;/em&gt; then &lt;em&gt;intersection&lt;/em&gt; can be described as A and B both occuring. If &lt;em&gt;A&lt;/em&gt; is the event that the first coin is heads and &lt;em&gt;B&lt;/em&gt; is the event that the second coin is heads then the interesection can be defined as (H,H).&lt;/p&gt;
+
+&lt;p&gt;INTERSECTION PIC&lt;/p&gt;
+
+&lt;h5 id=&quot;mutually-exclusive&quot;&gt;Mutually Exclusive&lt;/h5&gt;
+&lt;p&gt;Now sometimes two events &lt;em&gt;cannot&lt;/em&gt; cooccur. In this instance we refer to these events as being &lt;em&gt;mutually exclusive&lt;/em&gt;. For a really obviously example of this, consider the two events &lt;em&gt;A&lt;/em&gt; the first coin is heads and &lt;em&gt;B&lt;/em&gt; the first coin is tails. Now obviously if you flip the coin it has to land on either heads or tails so in this case the set of events that represent the intersection of &lt;em&gt;A&lt;/em&gt; and &lt;em&gt;B&lt;/em&gt; is empty. These two events are thus &lt;em&gt;mutually exclusive&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;MUTUALLY Exclusive Pic&lt;/p&gt;
+
+&lt;h5 id=&quot;complement&quot;&gt;Complement&lt;/h5&gt;
+&lt;p&gt;The above example can also help us illustrate another concept and that is the &lt;em&gt;complement&lt;/em&gt;. The &lt;em&gt;complement&lt;/em&gt; of an event &lt;em&gt;A&lt;/em&gt; can be be described as the set of all events in the sample space that are not &lt;em&gt;A&lt;/em&gt;. The &lt;em&gt;complements&lt;/em&gt; of an event and the event are always mutually exclusive. If we are flipping two coins and we describe event &lt;em&gt;A&lt;/em&gt; as the event that first coin is heads, then the complement is the subset of the sample space where &lt;em&gt;A&lt;/em&gt; is not heads namely:
+A^c = [(T,H),(T,T)]
+where A would equal:
+A = [(H,H),(H,T)]&lt;/p&gt;
+
+&lt;h5 id=&quot;sets-of-sets&quot;&gt;Sets of sets&lt;/h5&gt;
+&lt;p&gt;Now often when we are discussing events we don’t just want to talk about single outcomes such as a coin landing heads. Often we want to talk about lots of different events. We can apply the same notions of &lt;em&gt;intersection&lt;/em&gt;, &lt;em&gt;union&lt;/em&gt;, &lt;em&gt;complement&lt;/em&gt;, and &lt;em&gt;mutual exclusion&lt;/em&gt; on sets of events. For this we use the same symbols from above but larger.&lt;/p&gt;
+
+&lt;h2 id=&quot;probabilites-of-events&quot;&gt;Probabilites of Events&lt;/h2&gt;
+&lt;p&gt;Looking back at the previous examples we can now define the probability of events E_n in the sample space S as P(E). There are three conditions for describing these probabilities&lt;/p&gt;
+
+&lt;p&gt;1) 0&amp;lt;= P(E) &amp;lt;= 1
+2) P(S) = 1
+3) Given a set of events in S that are mutually exclusive the probability of the union of those events is equal to the sum of their probabilities, or:&lt;/p&gt;
+
+&lt;p&gt;P(UE) = SUM(E_N)&lt;/p&gt;
+
+&lt;p&gt;A nice feature of this if we have two events E and complementE then their Union will equal S and thus the probability of their union is 1&lt;/p&gt;
+
+&lt;p&gt;If we are looking at two events who are not mutually exclusive then we can define the probability of their union as&lt;/p&gt;
+
+&lt;p&gt;P(EuF) = P(E)+P(F) - P(EF).&lt;/p&gt;
+
+&lt;p&gt;The reason for subtracting their intersection is that any events that occur in both E and F will also occur in E and F individually. If we did not subtract these events they would be counted twice. A really nice way to see this is to draw out these events as a ven diagram. This property of adding the individual probabilities and then subtracting their intersections can be extended  to as the &lt;em&gt;inclusion-exclusion identity&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;conditional-probabilities&quot;&gt;Conditional Probabilities&lt;/h2&gt;
+&lt;p&gt;Conditional probabilities are a way to talk about probability when you are given information that affects the outcome in a sample space. For instance in our coin flipping example with two coins, if you are given the information that the first coin was heads, it eliminates certain outcomes. If we know the first coin is heads then the only possible outcomes are [(H,H),(H,T)]. Conditional probability is defined as:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;P(E&lt;/td&gt;
+      &lt;td&gt;F) = P(EF)/P(F)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Ex: If we flip two coins the probability of the outcome being (H,H) is 1/4
+However the conditional probability of (H,H) given that the first coin is heads is 1/2. Why?
+If F is the event the first coin is heads and E is the event the second coin is heads then looking back at our sample space we have:&lt;/p&gt;
+
+&lt;p&gt;S = [(H,H),(H,T),(T,H),(T,T)]
+E = [(H,H),(T,H)]
+F = [(H,H),(H,T)]
+EF = [(H,H)]&lt;/p&gt;
+
+&lt;p&gt;and&lt;/p&gt;
+
+&lt;p&gt;P(EF) = 1/4 ; P(F) = 2/4
+then P(E|F) = (1/4)/(2/4) = 1/2&lt;/p&gt;
+
+&lt;p&gt;This is a very simple example and almost seems illogical because the second coin flip isn’t affected by the first coin flip. However, what is affected by knowing the first coin flip is the subset of possible outcomes.&lt;/p&gt;
+
+&lt;p&gt;Let’s look at a more complicated example:
+A deck of cards consists of 26 red cards and 26 black cards. If we define event F as you drawing a black card and event E as you drawing a red card, we can ask: What is the probability of E given F? How does the probability of E change as a result of F?&lt;/p&gt;
+
+&lt;p&gt;P(F) = 26/52 = 1/2
+P(E) = 26/52 = 1/2
+P(EF)= (26/52)*(26/51)
+P(E|F) = P(EF)/P(F) = 26/51&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;One of the hardest things about probability is figuring out how to describe events. It is a very common pitfall to describe P(EF)= 0 which would make the probability of P(E&lt;/td&gt;
+      &lt;td&gt;F) which is obviously false. Really, using just your intuition one can see that the probability of drawing black card after drawing a red card is 26/51. Understanding how to formulate this though is just as important as the formulas themselves.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;indepence&quot;&gt;Indepence&lt;/h3&gt;
+&lt;p&gt;Two events are said to be independent if the probability of their interesection is equal to the product of their individual probabilities, or:&lt;/p&gt;
+
+&lt;p&gt;P(EF) = P(E)*P(F) and therefore
+P(E|F) = P(E)&lt;/p&gt;
+
+&lt;p&gt;Independence is important because it helps us to understand how different events affect each other. A lot of statistical tests will make assumptions regarding independence. One of the most important concepts in statistics is knowing that the models you create are just that &lt;em&gt;models&lt;/em&gt;. These models often explicitly make assumptions about independence which may not accuratley represent the real world. Understanding this is crucial in the real world because often these assumptions do not accurately reflect reality and can make us overconfident in our predictions. Events that are not independent are said to be dependent.&lt;/p&gt;
+
+&lt;h3 id=&quot;bayes-formula&quot;&gt;Bayes’ Formula&lt;/h3&gt;
+&lt;p&gt;Bayes’ formula is an extension of the conditional probability we discussed above. What is different from the conditional probability is that now is that when we formulate the denominator we extend it to explicitly state that it regards all events where are conditional event could occur. Specifically,&lt;/p&gt;
+
+&lt;p&gt;BAYES’ formula&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction So what follows is the beginning of a series of posts I will be making while going through Sheldon Ross’s Introduction to Probability Models 10ed.. Now that I have graduated I have a little more time to dedicate to topics that I find interesting. One of the topics I find most interesting is math, particularly probability, statistics, and how they can be used to model language. A lot of Ross’s book will be a review for me so I am hoping to hammer out some of the finer details that I may have missed when I first started studying probability.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2019/12/07/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-12-07T17:39:29-05:00</published><updated>2019-12-07T17:39:29-05:00</updated><id>http://localhost:4000/jekyll/update/2019/12/07/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/12/07/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
 
