@@ -47,13 +47,13 @@ public:
 <p>At first site one can see a few advantages in this solution. For one thing, no memory is allocated to create a map. Also, while both versions have O(n) runtime the XOR solution only uses a single loop. During the XOR operation each item in the list compared and the bit representation of <strong>a</strong> is changed accordingly.</p>
 
 <p>To understand what is going on let’s look at a toy example with the list [1,2,10,2,10].
-For each of the 5 iterations we will look at the value of 32-bit version of <strong>a</strong> :</p>
+For each of the 5 iterations we will look at the value of 16-bit version of <strong>a</strong> :</p>
 
 <table>
   <thead>
     <tr>
       <th>Array Index</th>
-      <th><strong>a</strong> 32-Bit Value</th>
+      <th><strong>a</strong> 16-Bit Value</th>
       <th><strong>a</strong> Integer Value</th>
       <th>Array Value</th>
     </tr>
