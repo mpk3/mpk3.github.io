@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-06T21:21:43-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Running with Hedgeclippers</title><subtitle>A website dedicated to adapting NLP techniques for the ever evolving needs of the modern world</subtitle><entry><title type="html">LeetCode 30-Day Challenge Part 1</title><link href="http://localhost:4000/leetcode/2020/03/06/Text-Classification-Series-1.html" rel="alternate" type="text/html" title="LeetCode 30-Day Challenge Part 1" /><published>2020-03-06T00:00:00-05:00</published><updated>2020-03-06T00:00:00-05:00</updated><id>http://localhost:4000/leetcode/2020/03/06/Text-Classification-Series-1</id><content type="html" xml:base="http://localhost:4000/leetcode/2020/03/06/Text-Classification-Series-1.html">&lt;h1 id=&quot;leetcode-30-days-of-coding-part-1&quot;&gt;LeetCode 30 Days of Coding Part 1&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-04-09T10:49:51-04:00</updated><id>/feed.xml</id><title type="html">Running with Hedgeclippers</title><subtitle>A website dedicated to adapting NLP techniques for the ever evolving needs of the modern world</subtitle><entry><title type="html">REST Architecture Review</title><link href="/web/services/2020/03/08/REST.html" rel="alternate" type="text/html" title="REST Architecture Review" /><published>2020-03-08T00:00:00-05:00</published><updated>2020-03-08T00:00:00-05:00</updated><id>/web/services/2020/03/08/REST</id><content type="html" xml:base="/web/services/2020/03/08/REST.html">&lt;h1 id=&quot;rest-architecture&quot;&gt;REST Architecture&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Allow the manipulation of web service data that is in textua format&lt;/li&gt;
+  &lt;li&gt;Uses predefined set of stateless operations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;there-are-6-guiding-constraints-for-restful-systems&quot;&gt;There are 6 guiding constraints for RESTful systems.&lt;/h3&gt;
+
+&lt;h4 id=&quot;client-server-architecture&quot;&gt;Client-server architecture&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Separate user interface from data storage
+    &lt;ul&gt;
+      &lt;li&gt;Improves portability, scalability, and allows both components to evolve separately.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;statelessness&quot;&gt;Statelessness&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Each request made by the client has all the information needed to process the request.&lt;/li&gt;
+  &lt;li&gt;No information is needed to be stored on the server between requests&lt;/li&gt;
+  &lt;li&gt;Single states are passed between different serverside services&lt;/li&gt;
+  &lt;li&gt;Clients requests are &lt;em&gt;in transition&lt;/em&gt; while they are waiting to become the current state&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;cacheability&quot;&gt;Cacheability&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Clients and intermediares can cache responses&lt;/li&gt;
+  &lt;li&gt;Responses must define their cacheability&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;layered-system&quot;&gt;Layered system&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Clients are unable to tell what part of the server they are connected to&lt;/li&gt;
+  &lt;li&gt;Allows for proxies, shared caches, security&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;code-on-demand&quot;&gt;Code on demand&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Servers can change client functionality by enabling the use of executable code&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;uniform-interface&quot;&gt;Uniform Interface&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Constraints:
+    &lt;ul&gt;
+      &lt;li&gt;Resource Identifiaction in requests. Servers can give out different data formats(HTML, XML, JSON) that are requested by the client by identifers (URIs).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Resource manipulation through representations
+    &lt;ul&gt;
+      &lt;li&gt;Representations passed to the client should be complete and allow modification&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Self-descriptive messages
+    &lt;ul&gt;
+      &lt;li&gt;Messages should also define how they should be processed&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;HATEOAS
+    &lt;ul&gt;
+      &lt;li&gt;Hypermedia as the engine of application state&lt;/li&gt;
+      &lt;li&gt;Dynamic access of server data through hyperlinks&lt;/li&gt;
+      &lt;li&gt;REST application will have a root URI requests are made to. Responses in turn will provide new links or other actions that are available to the client.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">REST Architecture</summary></entry><entry><title type="html">LeetCode 30-Day Challenge Part 1</title><link href="/leetcode/2020/03/06/LeetCode-1.html" rel="alternate" type="text/html" title="LeetCode 30-Day Challenge Part 1" /><published>2020-03-06T00:00:00-05:00</published><updated>2020-03-06T00:00:00-05:00</updated><id>/leetcode/2020/03/06/LeetCode-1</id><content type="html" xml:base="/leetcode/2020/03/06/LeetCode-1.html">&lt;h1 id=&quot;leetcode-30-days-of-coding-part-1&quot;&gt;LeetCode 30 Days of Coding Part 1&lt;/h1&gt;
 &lt;h3 id=&quot;leetcode-recently-released-a-30-day-contest-for-completing-coding-challenges&quot;&gt;LeetCode recently released a 30 day contest for completing coding challenges&lt;/h3&gt;
 &lt;p&gt;While some of these challenges are just different iterations on common algorithms, I have found this particularly useful for testing out how I would solve these problems in different programming languages. For the most part these algorithms can be implemented in the same way across languages outside obvious language particular features. One of the cool things about this though is that sometimes you can gleam really interesting ways of tackling problems. I will be completing the entire 30 day challenge and use this series of blog posts to highlight some of the more interesting techniques. I will be completing the challenge in both python and c++. For python I am mostly looking at writing code in the most pythonic way I can. For c++ the focus will be on understanding the changes in speed and memory allocation across implementations.&lt;/p&gt;
 
@@ -92,7 +159,7 @@ For each of the 5 iterations we will look at the value of 32-bit version of &lt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;It is interesting to note though that there are problems with both versions, specifically in the case of having multiple unique numbers. The naive solution will return the first value in the map that only appears once, while the bitwise solution will return the XOR equivalent of the individual numbers with all the duplicates removed. This is why it is important to go through test cases to fully understand the behavior of your code. The Naive solution will always return at least one unique number but the bitwise will return whatever integer results from XOR operation.&lt;/p&gt;</content><author><name></name></author><summary type="html">LeetCode 30 Days of Coding Part 1 LeetCode recently released a 30 day contest for completing coding challenges While some of these challenges are just different iterations on common algorithms, I have found this particularly useful for testing out how I would solve these problems in different programming languages. For the most part these algorithms can be implemented in the same way across languages outside obvious language particular features. One of the cool things about this though is that sometimes you can gleam really interesting ways of tackling problems. I will be completing the entire 30 day challenge and use this series of blog posts to highlight some of the more interesting techniques. I will be completing the challenge in both python and c++. For python I am mostly looking at writing code in the most pythonic way I can. For c++ the focus will be on understanding the changes in speed and memory allocation across implementations.</summary></entry><entry><title type="html">Introduction to Probabilistic Models 1</title><link href="http://localhost:4000/math/2020/01/18/Probability-Chapter-1.html" rel="alternate" type="text/html" title="Introduction to Probabilistic Models 1" /><published>2020-01-18T08:49:00-05:00</published><updated>2020-01-18T08:49:00-05:00</updated><id>http://localhost:4000/math/2020/01/18/Probability-Chapter-1</id><content type="html" xml:base="http://localhost:4000/math/2020/01/18/Probability-Chapter-1.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;It is interesting to note though that there are problems with both versions, specifically in the case of having multiple unique numbers. The naive solution will return the first value in the map that only appears once, while the bitwise solution will return the XOR equivalent of the individual numbers with all the duplicates removed. This is why it is important to go through test cases to fully understand the behavior of your code. The Naive solution will always return at least one unique number but the bitwise will return whatever integer results from XOR operation.&lt;/p&gt;</content><author><name></name></author><summary type="html">LeetCode 30 Days of Coding Part 1 LeetCode recently released a 30 day contest for completing coding challenges While some of these challenges are just different iterations on common algorithms, I have found this particularly useful for testing out how I would solve these problems in different programming languages. For the most part these algorithms can be implemented in the same way across languages outside obvious language particular features. One of the cool things about this though is that sometimes you can gleam really interesting ways of tackling problems. I will be completing the entire 30 day challenge and use this series of blog posts to highlight some of the more interesting techniques. I will be completing the challenge in both python and c++. For python I am mostly looking at writing code in the most pythonic way I can. For c++ the focus will be on understanding the changes in speed and memory allocation across implementations.</summary></entry><entry><title type="html">Introduction to Probabilistic Models 1</title><link href="/math/2020/01/18/Probability-Chapter-1.html" rel="alternate" type="text/html" title="Introduction to Probabilistic Models 1" /><published>2020-01-18T08:49:00-05:00</published><updated>2020-01-18T08:49:00-05:00</updated><id>/math/2020/01/18/Probability-Chapter-1</id><content type="html" xml:base="/math/2020/01/18/Probability-Chapter-1.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;So what follows is the beginning of a series of posts I will be making while going through Sheldon Ross’s &lt;em&gt;Introduction to Probability Models 10ed.&lt;/em&gt;.
 Now that I have graduated I have a little more time to dedicate to topics that I find interesting. One of the topics I find most interesting is math, particularly probability, statistics, and how they can be used to model language. A lot of Ross’s book will be a review for me so I am hoping to hammer out some of the finer details that I may have missed when I first started studying probability.&lt;/p&gt;
 
@@ -221,7 +288,7 @@ P(E|F) = P(E)&lt;/p&gt;
 &lt;h3 id=&quot;bayes-formula&quot;&gt;Bayes’ Formula&lt;/h3&gt;
 &lt;p&gt;Bayes’ formula is an extension of the conditional probability we discussed above. What is different from the conditional probability is that now is that when we formulate the denominator we extend it to explicitly state that it regards all events where are conditional event could occur. Specifically,&lt;/p&gt;
 
-&lt;p&gt;BAYES’ formula&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction So what follows is the beginning of a series of posts I will be making while going through Sheldon Ross’s Introduction to Probability Models 10ed.. Now that I have graduated I have a little more time to dedicate to topics that I find interesting. One of the topics I find most interesting is math, particularly probability, statistics, and how they can be used to model language. A lot of Ross’s book will be a review for me so I am hoping to hammer out some of the finer details that I may have missed when I first started studying probability.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2019/12/07/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-12-07T17:39:29-05:00</published><updated>2019-12-07T17:39:29-05:00</updated><id>http://localhost:4000/jekyll/update/2019/12/07/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/12/07/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+&lt;p&gt;BAYES’ formula&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction So what follows is the beginning of a series of posts I will be making while going through Sheldon Ross’s Introduction to Probability Models 10ed.. Now that I have graduated I have a little more time to dedicate to topics that I find interesting. One of the topics I find most interesting is math, particularly probability, statistics, and how they can be used to model language. A lot of Ross’s book will be a review for me so I am hoping to hammer out some of the finer details that I may have missed when I first started studying probability.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/jekyll/update/2019/12/07/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-12-07T17:39:29-05:00</published><updated>2019-12-07T17:39:29-05:00</updated><id>/jekyll/update/2019/12/07/welcome-to-jekyll</id><content type="html" xml:base="/jekyll/update/2019/12/07/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
 

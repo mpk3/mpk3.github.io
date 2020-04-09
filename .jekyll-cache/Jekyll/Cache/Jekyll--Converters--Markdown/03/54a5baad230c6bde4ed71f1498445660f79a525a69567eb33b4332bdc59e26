@@ -1,0 +1,69 @@
+I"]	<h1 id="rest-architecture">REST Architecture</h1>
+
+<ul>
+  <li>Allow the manipulation of web service data that is in textua format</li>
+  <li>Uses predefined set of stateless operations</li>
+</ul>
+
+<h3 id="there-are-6-guiding-constraints-for-restful-systems">There are 6 guiding constraints for RESTful systems.</h3>
+
+<h4 id="client-server-architecture">Client-server architecture</h4>
+<ul>
+  <li>Separate user interface from data storage
+    <ul>
+      <li>Improves portability, scalability, and allows both components to evolve separately.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="statelessness">Statelessness</h4>
+<ul>
+  <li>Each request made by the client has all the information needed to process the request.</li>
+  <li>No information is needed to be stored on the server between requests</li>
+  <li>Single states are passed between different serverside services</li>
+  <li>Clients requests are <em>in transition</em> while they are waiting to become the current state</li>
+</ul>
+
+<h4 id="cacheability">Cacheability</h4>
+<ul>
+  <li>Clients and intermediares can cache responses</li>
+  <li>Responses must define their cacheability</li>
+</ul>
+
+<h4 id="layered-system">Layered system</h4>
+<ul>
+  <li>Clients are unable to tell what part of the server they are connected to</li>
+  <li>Allows for proxies, shared caches, security</li>
+</ul>
+
+<h4 id="code-on-demand">Code on demand</h4>
+<ul>
+  <li>Servers can change client functionality by enabling the use of executable code</li>
+</ul>
+
+<h4 id="uniform-interface">Uniform Interface</h4>
+<ul>
+  <li>Constraints:
+    <ul>
+      <li>Resource Identifiaction in requests. Servers can give out different data formats(HTML, XML, JSON) that are requested by the client by identifers (URIs).</li>
+    </ul>
+  </li>
+  <li>Resource manipulation through representations
+    <ul>
+      <li>Representations passed to the client should be complete and allow modification</li>
+    </ul>
+  </li>
+  <li>Self-descriptive messages
+    <ul>
+      <li>Messages should also define how they should be processed</li>
+    </ul>
+  </li>
+  <li>HATEOAS
+    <ul>
+      <li>Hypermedia as the engine of application state</li>
+      <li>Dynamic access of server data through hyperlinks</li>
+      <li>REST application will have a root URI requests are made to. Responses in turn will provide new links or other actions that are available to the client.</li>
+    </ul>
+  </li>
+</ul>
+:ET
