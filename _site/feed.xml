@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-04-09T10:49:51-04:00</updated><id>/feed.xml</id><title type="html">Running with Hedgeclippers</title><subtitle>A website dedicated to adapting NLP techniques for the ever evolving needs of the modern world</subtitle><entry><title type="html">REST Architecture Review</title><link href="/web/services/2020/03/08/REST.html" rel="alternate" type="text/html" title="REST Architecture Review" /><published>2020-03-08T00:00:00-05:00</published><updated>2020-03-08T00:00:00-05:00</updated><id>/web/services/2020/03/08/REST</id><content type="html" xml:base="/web/services/2020/03/08/REST.html">&lt;h1 id=&quot;rest-architecture&quot;&gt;REST Architecture&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-09T12:03:42-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Running with Hedgeclippers</title><subtitle>A website dedicated to adapting NLP techniques for the ever evolving needs of the modern world</subtitle><entry><title type="html">REST Architecture Review</title><link href="http://localhost:4000/web/services/2020/03/08/REST.html" rel="alternate" type="text/html" title="REST Architecture Review" /><published>2020-03-08T00:00:00-05:00</published><updated>2020-03-08T00:00:00-05:00</updated><id>http://localhost:4000/web/services/2020/03/08/REST</id><content type="html" xml:base="http://localhost:4000/web/services/2020/03/08/REST.html">&lt;h1 id=&quot;rest-architecture&quot;&gt;REST Architecture&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Allow the manipulation of web service data that is in textua format&lt;/li&gt;
@@ -65,7 +65,7 @@
       &lt;li&gt;REST application will have a root URI requests are made to. Responses in turn will provide new links or other actions that are available to the client.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">REST Architecture</summary></entry><entry><title type="html">LeetCode 30-Day Challenge Part 1</title><link href="/leetcode/2020/03/06/LeetCode-1.html" rel="alternate" type="text/html" title="LeetCode 30-Day Challenge Part 1" /><published>2020-03-06T00:00:00-05:00</published><updated>2020-03-06T00:00:00-05:00</updated><id>/leetcode/2020/03/06/LeetCode-1</id><content type="html" xml:base="/leetcode/2020/03/06/LeetCode-1.html">&lt;h1 id=&quot;leetcode-30-days-of-coding-part-1&quot;&gt;LeetCode 30 Days of Coding Part 1&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">REST Architecture</summary></entry><entry><title type="html">LeetCode 30-Day Challenge Part 1</title><link href="http://localhost:4000/leetcode/2020/03/06/LeetCode-1.html" rel="alternate" type="text/html" title="LeetCode 30-Day Challenge Part 1" /><published>2020-03-06T00:00:00-05:00</published><updated>2020-03-06T00:00:00-05:00</updated><id>http://localhost:4000/leetcode/2020/03/06/LeetCode-1</id><content type="html" xml:base="http://localhost:4000/leetcode/2020/03/06/LeetCode-1.html">&lt;h1 id=&quot;leetcode-30-days-of-coding-part-1&quot;&gt;LeetCode 30 Days of Coding Part 1&lt;/h1&gt;
 &lt;h3 id=&quot;leetcode-recently-released-a-30-day-contest-for-completing-coding-challenges&quot;&gt;LeetCode recently released a 30 day contest for completing coding challenges&lt;/h3&gt;
 &lt;p&gt;While some of these challenges are just different iterations on common algorithms, I have found this particularly useful for testing out how I would solve these problems in different programming languages. For the most part these algorithms can be implemented in the same way across languages outside obvious language particular features. One of the cool things about this though is that sometimes you can gleam really interesting ways of tackling problems. I will be completing the entire 30 day challenge and use this series of blog posts to highlight some of the more interesting techniques. I will be completing the challenge in both python and c++. For python I am mostly looking at writing code in the most pythonic way I can. For c++ the focus will be on understanding the changes in speed and memory allocation across implementations.&lt;/p&gt;
 
@@ -159,149 +159,4 @@ For each of the 5 iterations we will look at the value of 32-bit version of &lt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;It is interesting to note though that there are problems with both versions, specifically in the case of having multiple unique numbers. The naive solution will return the first value in the map that only appears once, while the bitwise solution will return the XOR equivalent of the individual numbers with all the duplicates removed. This is why it is important to go through test cases to fully understand the behavior of your code. The Naive solution will always return at least one unique number but the bitwise will return whatever integer results from XOR operation.&lt;/p&gt;</content><author><name></name></author><summary type="html">LeetCode 30 Days of Coding Part 1 LeetCode recently released a 30 day contest for completing coding challenges While some of these challenges are just different iterations on common algorithms, I have found this particularly useful for testing out how I would solve these problems in different programming languages. For the most part these algorithms can be implemented in the same way across languages outside obvious language particular features. One of the cool things about this though is that sometimes you can gleam really interesting ways of tackling problems. I will be completing the entire 30 day challenge and use this series of blog posts to highlight some of the more interesting techniques. I will be completing the challenge in both python and c++. For python I am mostly looking at writing code in the most pythonic way I can. For c++ the focus will be on understanding the changes in speed and memory allocation across implementations.</summary></entry><entry><title type="html">Introduction to Probabilistic Models 1</title><link href="/math/2020/01/18/Probability-Chapter-1.html" rel="alternate" type="text/html" title="Introduction to Probabilistic Models 1" /><published>2020-01-18T08:49:00-05:00</published><updated>2020-01-18T08:49:00-05:00</updated><id>/math/2020/01/18/Probability-Chapter-1</id><content type="html" xml:base="/math/2020/01/18/Probability-Chapter-1.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;So what follows is the beginning of a series of posts I will be making while going through Sheldon Ross’s &lt;em&gt;Introduction to Probability Models 10ed.&lt;/em&gt;.
-Now that I have graduated I have a little more time to dedicate to topics that I find interesting. One of the topics I find most interesting is math, particularly probability, statistics, and how they can be used to model language. A lot of Ross’s book will be a review for me so I am hoping to hammer out some of the finer details that I may have missed when I first started studying probability.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-this-introduction-to-probability-models-&quot;&gt;Why this &lt;em&gt;Introduction to Probability Models&lt;/em&gt; ?&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;So I have been exposed to a lot of different materials with regard to math especially with regard to probability and statistics. I have read some of Jaynes _Probability Theory_, about half of McElreaths _Statistical Rethinking_, and been exposed to a variety of different books with regard to probability especially from the viewpoint of machine learning. I have chosen this book because A) I am looking for a book strictly about probability and B) so far Ross's book has been these most accessible. There seems to be little _fluff_ in this book. The topics are clearly outlined. The chapters are short and to the point. The exercises are illuminating. I am hoping to review a lot of topics and learn some new stuff along the way. If you are also following along, maybe you will too.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;chapter-1&quot;&gt;Chapter 1&lt;/h2&gt;
-&lt;p&gt;In chapter 1 we will be looking at the following topics:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Sample Spaces and Events&lt;/li&gt;
-  &lt;li&gt;Probabilities Defined on Events&lt;/li&gt;
-  &lt;li&gt;Conditional Probability&lt;/li&gt;
-  &lt;li&gt;Indepence&lt;/li&gt;
-  &lt;li&gt;Bayes’ Rule/Formula&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;All of these topics are rather rudimentary so this discussion will be brief.&lt;/p&gt;
-
-&lt;h3 id=&quot;sample-space-and-events&quot;&gt;Sample Space and Events&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A sample space can be defined as all of the outcomes that are possible given an experiment. If we are talking about a coin being flipped once then this &lt;em&gt;sample space&lt;/em&gt; can be defined as:
-&lt;script type=&quot;math/tex&quot;&gt;S=[H,T]&lt;/script&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;An event in this sample space (S), can be defined as any subset of the this sample space. In the easy case above there are only two events heads(H) or tails (T)&lt;/p&gt;
-
-&lt;p&gt;Now obviously this idea extends to anything. Often you will see examples looking at dice, cards, or jars of colored balls etc. If we have two coins and are flipping them each once or &lt;em&gt;one coin but flipping it twice&lt;/em&gt; then the sample space would be:
-S=[(H,H),(H,T),(T,H),(T,T)]&lt;/p&gt;
-
-&lt;p&gt;In this latter case then the set of events are simply the cartesian product of the outcomes of the two coins. Each of the combinations of heads and tails in the above example are events. If you are familiar with set theory the sample space can be defined as the cartesian product of the sets of events.&lt;/p&gt;
-
-&lt;h5 id=&quot;unions-and-intersections-of-events&quot;&gt;Unions and Intersections of events&lt;/h5&gt;
-&lt;p&gt;If we have multiple events often we want to talk about how these events occur and whether or not they occur together. For two separate events &lt;em&gt;A&lt;/em&gt; and &lt;em&gt;B&lt;/em&gt; we describe their &lt;em&gt;union&lt;/em&gt; as A or B occuring. As an example , if event &lt;em&gt;A&lt;/em&gt; is (H,H) and event &lt;em&gt;B&lt;/em&gt; is (H,T) then there union is the subset of S [(H,H), (H,T)]&lt;/p&gt;
-
-&lt;p&gt;UNION PIC&lt;/p&gt;
-
-&lt;p&gt;If &lt;em&gt;union&lt;/em&gt; can be described as &lt;em&gt;A or B occuring&lt;/em&gt; then &lt;em&gt;intersection&lt;/em&gt; can be described as A and B both occuring. If &lt;em&gt;A&lt;/em&gt; is the event that the first coin is heads and &lt;em&gt;B&lt;/em&gt; is the event that the second coin is heads then the interesection can be defined as (H,H).&lt;/p&gt;
-
-&lt;p&gt;INTERSECTION PIC&lt;/p&gt;
-
-&lt;h5 id=&quot;mutually-exclusive&quot;&gt;Mutually Exclusive&lt;/h5&gt;
-&lt;p&gt;Now sometimes two events &lt;em&gt;cannot&lt;/em&gt; cooccur. In this instance we refer to these events as being &lt;em&gt;mutually exclusive&lt;/em&gt;. For a really obviously example of this, consider the two events &lt;em&gt;A&lt;/em&gt; the first coin is heads and &lt;em&gt;B&lt;/em&gt; the first coin is tails. Now obviously if you flip the coin it has to land on either heads or tails so in this case the set of events that represent the intersection of &lt;em&gt;A&lt;/em&gt; and &lt;em&gt;B&lt;/em&gt; is empty. These two events are thus &lt;em&gt;mutually exclusive&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;MUTUALLY Exclusive Pic&lt;/p&gt;
-
-&lt;h5 id=&quot;complement&quot;&gt;Complement&lt;/h5&gt;
-&lt;p&gt;The above example can also help us illustrate another concept and that is the &lt;em&gt;complement&lt;/em&gt;. The &lt;em&gt;complement&lt;/em&gt; of an event &lt;em&gt;A&lt;/em&gt; can be be described as the set of all events in the sample space that are not &lt;em&gt;A&lt;/em&gt;. The &lt;em&gt;complements&lt;/em&gt; of an event and the event are always mutually exclusive. If we are flipping two coins and we describe event &lt;em&gt;A&lt;/em&gt; as the event that first coin is heads, then the complement is the subset of the sample space where &lt;em&gt;A&lt;/em&gt; is not heads namely:
-A^c = [(T,H),(T,T)]
-where A would equal:
-A = [(H,H),(H,T)]&lt;/p&gt;
-
-&lt;h5 id=&quot;sets-of-sets&quot;&gt;Sets of sets&lt;/h5&gt;
-&lt;p&gt;Now often when we are discussing events we don’t just want to talk about single outcomes such as a coin landing heads. Often we want to talk about lots of different events. We can apply the same notions of &lt;em&gt;intersection&lt;/em&gt;, &lt;em&gt;union&lt;/em&gt;, &lt;em&gt;complement&lt;/em&gt;, and &lt;em&gt;mutual exclusion&lt;/em&gt; on sets of events. For this we use the same symbols from above but larger.&lt;/p&gt;
-
-&lt;h2 id=&quot;probabilites-of-events&quot;&gt;Probabilites of Events&lt;/h2&gt;
-&lt;p&gt;Looking back at the previous examples we can now define the probability of events E_n in the sample space S as P(E). There are three conditions for describing these probabilities&lt;/p&gt;
-
-&lt;p&gt;1) 0&amp;lt;= P(E) &amp;lt;= 1
-2) P(S) = 1
-3) Given a set of events in S that are mutually exclusive the probability of the union of those events is equal to the sum of their probabilities, or:&lt;/p&gt;
-
-&lt;p&gt;P(UE) = SUM(E_N)&lt;/p&gt;
-
-&lt;p&gt;A nice feature of this if we have two events E and complementE then their Union will equal S and thus the probability of their union is 1&lt;/p&gt;
-
-&lt;p&gt;If we are looking at two events who are not mutually exclusive then we can define the probability of their union as&lt;/p&gt;
-
-&lt;p&gt;P(EuF) = P(E)+P(F) - P(EF).&lt;/p&gt;
-
-&lt;p&gt;The reason for subtracting their intersection is that any events that occur in both E and F will also occur in E and F individually. If we did not subtract these events they would be counted twice. A really nice way to see this is to draw out these events as a ven diagram. This property of adding the individual probabilities and then subtracting their intersections can be extended  to as the &lt;em&gt;inclusion-exclusion identity&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;conditional-probabilities&quot;&gt;Conditional Probabilities&lt;/h2&gt;
-&lt;p&gt;Conditional probabilities are a way to talk about probability when you are given information that affects the outcome in a sample space. For instance in our coin flipping example with two coins, if you are given the information that the first coin was heads, it eliminates certain outcomes. If we know the first coin is heads then the only possible outcomes are [(H,H),(H,T)]. Conditional probability is defined as:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;P(E&lt;/td&gt;
-      &lt;td&gt;F) = P(EF)/P(F)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Ex: If we flip two coins the probability of the outcome being (H,H) is 1/4
-However the conditional probability of (H,H) given that the first coin is heads is 1/2. Why?
-If F is the event the first coin is heads and E is the event the second coin is heads then looking back at our sample space we have:&lt;/p&gt;
-
-&lt;p&gt;S = [(H,H),(H,T),(T,H),(T,T)]
-E = [(H,H),(T,H)]
-F = [(H,H),(H,T)]
-EF = [(H,H)]&lt;/p&gt;
-
-&lt;p&gt;and&lt;/p&gt;
-
-&lt;p&gt;P(EF) = 1/4 ; P(F) = 2/4
-then P(E|F) = (1/4)/(2/4) = 1/2&lt;/p&gt;
-
-&lt;p&gt;This is a very simple example and almost seems illogical because the second coin flip isn’t affected by the first coin flip. However, what is affected by knowing the first coin flip is the subset of possible outcomes.&lt;/p&gt;
-
-&lt;p&gt;Let’s look at a more complicated example:
-A deck of cards consists of 26 red cards and 26 black cards. If we define event F as you drawing a black card and event E as you drawing a red card, we can ask: What is the probability of E given F? How does the probability of E change as a result of F?&lt;/p&gt;
-
-&lt;p&gt;P(F) = 26/52 = 1/2
-P(E) = 26/52 = 1/2
-P(EF)= (26/52)*(26/51)
-P(E|F) = P(EF)/P(F) = 26/51&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;One of the hardest things about probability is figuring out how to describe events. It is a very common pitfall to describe P(EF)= 0 which would make the probability of P(E&lt;/td&gt;
-      &lt;td&gt;F) which is obviously false. Really, using just your intuition one can see that the probability of drawing black card after drawing a red card is 26/51. Understanding how to formulate this though is just as important as the formulas themselves.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;indepence&quot;&gt;Indepence&lt;/h3&gt;
-&lt;p&gt;Two events are said to be independent if the probability of their interesection is equal to the product of their individual probabilities, or:&lt;/p&gt;
-
-&lt;p&gt;P(EF) = P(E)*P(F) and therefore
-P(E|F) = P(E)&lt;/p&gt;
-
-&lt;p&gt;Independence is important because it helps us to understand how different events affect each other. A lot of statistical tests will make assumptions regarding independence. One of the most important concepts in statistics is knowing that the models you create are just that &lt;em&gt;models&lt;/em&gt;. These models often explicitly make assumptions about independence which may not accuratley represent the real world. Understanding this is crucial in the real world because often these assumptions do not accurately reflect reality and can make us overconfident in our predictions. Events that are not independent are said to be dependent.&lt;/p&gt;
-
-&lt;h3 id=&quot;bayes-formula&quot;&gt;Bayes’ Formula&lt;/h3&gt;
-&lt;p&gt;Bayes’ formula is an extension of the conditional probability we discussed above. What is different from the conditional probability is that now is that when we formulate the denominator we extend it to explicitly state that it regards all events where are conditional event could occur. Specifically,&lt;/p&gt;
-
-&lt;p&gt;BAYES’ formula&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction So what follows is the beginning of a series of posts I will be making while going through Sheldon Ross’s Introduction to Probability Models 10ed.. Now that I have graduated I have a little more time to dedicate to topics that I find interesting. One of the topics I find most interesting is math, particularly probability, statistics, and how they can be used to model language. A lot of Ross’s book will be a review for me so I am hoping to hammer out some of the finer details that I may have missed when I first started studying probability.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/jekyll/update/2019/12/07/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-12-07T17:39:29-05:00</published><updated>2019-12-07T17:39:29-05:00</updated><id>/jekyll/update/2019/12/07/welcome-to-jekyll</id><content type="html" xml:base="/jekyll/update/2019/12/07/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Where &lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;It is interesting to note though that there are problems with both versions, specifically in the case of having multiple unique numbers. The naive solution will return the first value in the map that only appears once, while the bitwise solution will return the XOR equivalent of the individual numbers with all the duplicates removed. This is why it is important to go through test cases to fully understand the behavior of your code. The Naive solution will always return at least one unique number but the bitwise will return whatever integer results from XOR operation.&lt;/p&gt;</content><author><name></name></author><summary type="html">LeetCode 30 Days of Coding Part 1 LeetCode recently released a 30 day contest for completing coding challenges While some of these challenges are just different iterations on common algorithms, I have found this particularly useful for testing out how I would solve these problems in different programming languages. For the most part these algorithms can be implemented in the same way across languages outside obvious language particular features. One of the cool things about this though is that sometimes you can gleam really interesting ways of tackling problems. I will be completing the entire 30 day challenge and use this series of blog posts to highlight some of the more interesting techniques. I will be completing the challenge in both python and c++. For python I am mostly looking at writing code in the most pythonic way I can. For c++ the focus will be on understanding the changes in speed and memory allocation across implementations.</summary></entry></feed>
