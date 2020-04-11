@@ -27,3 +27,5 @@ def limiter_tweepy_error_handler(cursor)
 ```
 
 The error message can be accessed as a dictionary through the ```response``` attribute of the TweepError. I used the code above to specifically wait for 15 mins based on two separate error codes. This could obviously be extended to handle a variety of issues while you mitigate the limitations Twitter puts on this free service.
+
+[You can check out the twitter error codes here as well ](https://developer.twitter.com/en/docs/basics/response-codes)
