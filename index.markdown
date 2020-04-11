@@ -4,4 +4,4 @@
 
 layout: home
 ---
-This is a blog dedicated to the notes and materials I curate working on different topics. For professional materials and links to specific github repositories please check the topic links in the upper right. The blog posts are more generally a place for me to document what I am learning about, which includes my hobbies. 
+This is a blog dedicated to the notes and materials I curate working on different topics. For professional materials and links to specific github repositories, please check the topic links in the upper right. For everything elsecheck out the links to my posts below. 
