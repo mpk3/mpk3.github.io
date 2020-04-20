@@ -4,5 +4,5 @@ title: About
 permalink: /about/
 ---
 
-Recent graduate with an MSc in Computationl Linguistics from SUNY Buffalo. Interested in complex systems, nlp, and all topics that commingle in the brackish of CL.
+Recent grad with an MS in Computationl Linguistics from SUNY Buffalo. Interested in complex systems, nlp, entomology, Chinese, embedded systems blah blah blah
 
