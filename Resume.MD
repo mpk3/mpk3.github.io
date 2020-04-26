@@ -15,7 +15,7 @@ Focus in computatonally feasible linguistic models and disinformation detection 
 - Computational Grammar Development
 - Corpus analysis
 
-### TESOL Teacher
+### Joy English - TESOL Teacher, Taipei Taiwan
 - Develop L2 teaching curriculum
 - English teacher
 
