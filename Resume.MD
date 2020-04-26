@@ -5,11 +5,10 @@ permalink: /Resume/
 ---
 
 # Mitchell P. Kristie III
-Recent graduate with an M.S. in Computational Linguistics. I have worked on both statistical and rule based natural language processing
-Focus in computatonally feasible linguistic models and disinformation detection in media
+Recent graduate with an M.S. in Computational Linguistics. I have worked on both statistical and rule based natural language processing. Focused on computationally feasible linguistic models and disinformation detection in media.
 
 ## Experience
-### Lionbridge - Linguist
+### Lionbridge - Linguist - Current
 - Annotation scheme development
 - Linguistic research
 - Computational Grammar Development
