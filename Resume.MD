@@ -31,9 +31,9 @@ Recent graduate with an M.S. in Computational Linguistics. I have worked on both
 
 ## Libaries and Languages
 
-|----------------|---------------|------------|--------|---------|
-| Python         | Java          | R          | SQl    | Prolog  |
-| SciPy Libaries | Sci-Kit Learn | Tensorflow | Plotly | Seaborn |
+|----------------|---------------|------------|-----------|---------|
+| Python         | Java          | R          | SQL/MySQL | Prolog  |
+| SciPy Libaries | Sci-Kit Learn | Tensorflow | Plotly    | Seaborn |
 
 	
 ## Foreign Languages
