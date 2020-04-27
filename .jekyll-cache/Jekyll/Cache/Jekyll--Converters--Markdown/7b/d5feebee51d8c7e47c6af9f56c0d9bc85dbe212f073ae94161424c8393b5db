@@ -1,4 +1,4 @@
-I"<h1 id="leetcode-30-days-of-coding-part-2-subarray-sum-equal-to-k">LeetCode 30 Days of Coding Part 2: Subarray Sum Equal to K</h1>
+I"<h1 id="leetcode-30-days-of-coding-part-2-subarray-sum-equal-to-k">LeetCode 30 Days of Coding Part 2: Subarray Sum Equal to K</h1>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Given:
 
 number k 
@@ -35,11 +35,10 @@ Task: Find total number of contiguous subarrays whose sum equals k
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">subarraySum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        
-		<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">cumulative_sum</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">sum_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-        <span class="n">sum_dict</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> 
+        <span class="n">sum_dict</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
         
         <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
             <span class="n">cumulative_sum</span> <span class="o">+=</span> <span class="n">number</span>
@@ -47,9 +46,9 @@ Task: Find total number of contiguous subarrays whose sum equals k
             <span class="k">if</span> <span class="n">difference</span> <span class="ow">in</span> <span class="n">sum_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
                 <span class="n">count</span> <span class="o">+=</span> <span class="n">sum_dict</span><span class="p">[</span><span class="n">difference</span><span class="p">]</span>
             <span class="k">if</span> <span class="n">cumulative_sum</span> <span class="ow">in</span> <span class="n">sum_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-                 <span class="n">sum_dict</span><span class="p">[</span><span class="n">cumulative_sum</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">sum_dict</span><span class="p">[</span><span class="n">cumulative_sum</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="k">else</span><span class="p">:</span>
-                 <span class="n">sum_dict</span><span class="p">[</span><span class="n">cumulative_sum</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">sum_dict</span><span class="p">[</span><span class="n">cumulative_sum</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="k">return</span> <span class="n">count</span>
 </code></pre></div></div>
 :ET
