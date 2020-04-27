@@ -1,0 +1,55 @@
+I"<h1 id="leetcode-30-days-of-coding-part-2-subarray-sum-equal-to-k">LeetCode 30 Days of Coding Part 2: Subarray Sum Equal to K</h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Given:
+
+number k 
+arr [i] 
+1=&lt; arr.size() =&lt; 20,000
+-1e7 =&lt; i.value =&lt; 1e7
+
+Task: Find total number of contiguous subarrays whose sum equals k
+
+</code></pre></div></div>
+<p>I worked on two separate solutions for this problem. The solutions offer different complexity options which is nice in case you are trying to leverage memory or processing speed. I present both solutions in Python.</p>
+
+<h3 id="solution-1">Solution 1:</h3>
+<h4 id="time-complexity-on2">Time Complexity: O(n^2)</h4>
+<h4 id="space-complexity-o1">Space Complexity: O(1)</h4>
+<p>The time complexity of this solution is due to the two for-loops. The first for-loop is essentially starting every subarray at each index in the the array. The second for-loop then checks the sum of each possible subarray as it walks over each index after the start index. This is a naive solution that checks every subarray without considering anything else. While the runtime is about as bad as it gets the space complexity is O(1), which could be a nice feature if you are constrained by memory such as in embedded systems. What is weird about this solution is that in LeetCode if you submit this in Java/C++ you will not get a runtime error. In python however it will throw an error for <em>Time Limit Exceeded</em>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">subarraySum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="n">cumulative_sum</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+                <span class="n">cumulative_sum</span> <span class="o">+=</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">cumulative_sum</span> <span class="o">==</span> <span class="n">k</span><span class="p">):</span>
+                    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">count</span>
+</code></pre></div></div>
+
+<h3 id="solution-2">Solution 2:</h3>
+<h4 id="time-complexity-on">Time Complexity: O(n)</h4>
+<h4 id="space-complexity-on">Space Complexity: O(n)</h4>
+<p>The advantage of this solution is that it uses a dictionary (hashmap) to store the cumulative sum up to an index for each index in the array. The hashmap keys are equal to the cumulative sum and their values are incremented whenever a subarray is found that has an equivalent sum. By checking the differences of these sums you are able to tell if the subarray between two indeces equals k.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">subarraySum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        
+		<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">cumulative_sum</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">sum_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">sum_dict</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> 
+        
+        <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+            <span class="n">cumulative_sum</span> <span class="o">+=</span> <span class="n">number</span>
+            <span class="n">difference</span> <span class="o">=</span> <span class="n">cumulative_sum</span> <span class="o">-</span> <span class="n">k</span>
+            <span class="k">if</span> <span class="n">difference</span> <span class="ow">in</span> <span class="n">sum_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="n">count</span> <span class="o">+=</span> <span class="n">sum_dict</span><span class="p">[</span><span class="n">difference</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">cumulative_sum</span> <span class="ow">in</span> <span class="n">sum_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                 <span class="n">sum_dict</span><span class="p">[</span><span class="n">cumulative_sum</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                 <span class="n">sum_dict</span><span class="p">[</span><span class="n">cumulative_sum</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">count</span>
+</code></pre></div></div>
+:ET
