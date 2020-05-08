@@ -11,7 +11,7 @@
 <h4 id="challenge">Challenge:</h4>
 <p>Given a <strong>non-empty</strong> array of integers, every element appears <em>twice</em> except for one. Find that single one.</p>
 
-<h4 id="naive-solution">Naive Solution</h4>
+<h3 id="naive-solution">Naive Solution</h3>
 <p>The naive solution to this problem is pretty straight forward. You first initialize an unordered map and then iterate over the list. For each element in the array if the map contains the number as a key its value is incremented. At the end of the initial for-loop you then iterate over the map and find the key that only has a value of 1.</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
 #include &lt;vector&gt;
@@ -32,59 +32,57 @@ public:
     }
 };
 </code></pre></div></div>
-<h4 id="xor-bit-manipulation-solution">XOR Bit Manipulation Solution</h4>
+<h3 id="xor-bit-manipulation-solution">XOR Bit Manipulation Solution</h3>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class BitWiseSolution {
-  public int singleNumber(int[] nums) {
+public:
+    int singleNumber(vector&lt;int&gt;&amp; nums) {
     int a = 0;
     for (int i : nums) {
-      a ^= i;
+        a ^= i;
     }
     return a;
   }
+};
 </code></pre></div></div>
 <p>At first site one can see a few advantages in this solution. For one thing, no memory is allocated to create a map. Also, while both versions have O(n) runtime the XOR solution only uses a single loop. During the XOR operation each item in the list compared and the bit representation of <strong>a</strong> is changed accordingly.</p>
 
 <p>To understand what is going on let’s look at a toy example with the list [1,2,10,2,10].
-For each of the 5 iterations we will look at the value of 32-bit version of <strong>a</strong>:
-Array Index | 32-Bit Value | Integer Value | Array Value 
-————|————–|—————|————
-0|0000000000000001|1|1</p>
+For each of the 5 iterations we will look at the value of 16-bit version of <strong>a</strong> :</p>
 
 <table>
+  <thead>
+    <tr>
+      <th>Array Index</th>
+      <th><strong>a</strong> 16-Bit Value</th>
+      <th><strong>a</strong> Integer Value</th>
+      <th>Array Value</th>
+    </tr>
+  </thead>
   <tbody>
+    <tr>
+      <td>0</td>
+      <td>0000000000000001</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
     <tr>
       <td>1</td>
       <td>0000000000000011</td>
       <td>3</td>
       <td>2</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
       <td>2</td>
       <td>0000000000001001</td>
       <td>9</td>
       <td>10</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
       <td>3</td>
       <td>0000000000001011</td>
       <td>11</td>
       <td>2</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
       <td>4</td>
       <td>0000000000000001</td>

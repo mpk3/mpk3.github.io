@@ -1,0 +1,18 @@
+I"_<h1 id="cnns-for-nlp">CNNs for NLP</h1>
+
+<h3 id="a-story">A Story:</h3>
+
+<p>There was a period of time in my life where I worked as a carpenter for a hostel in Taiwan. The building had a full woodshop on the 4th floor with a table saw in the middle of the room. One day the owner came upstairs and found me using a circular saw when he remarked I should use the table saw because it was safer. I had been avoiding the table saw because typically these saws were a lot stronger than handheld versions. There are horror stories in every woodshop about pieces of wood impaling or seriously injuring woodworkers after it was kicked back by one of these 2000 lbs behemoths. When I told him this, he showed me that the table saw was actually a homemade version, made from the same brand and model of the skil-saw I had in my hand. After that whenever I walked passed a construction site I would always notice the same setup. There would always be a strong piece of plywood screwed to two wood horses with the saw mounted upside down so its blade faced upwards. While a layman would never thought of this, these carpenters were experts in their craft and thus could find unique ways to leverage the resources they have. Understanding how their tools worked, allowed these carpenters to create a better, more jobsite appropriate version of a different saw.</p>
+
+<p>One of cooler things about Neural Nets is that as you advance you learn to employ different architectures for specific kinds of tasks. In this way, neural network architectures are one of the most powerful tools a DL/ML/CL engineer can use. So like the carpenters in Taiwan, learning the nuances of my tools is important for leveraging their full capabilities. Text is generally handled with recurrent models but there has been significant progress in using convolutional neural networks for certain tasks. For my continued research into fake news detection, I have been working on CNNs. For this reason I will be reviewing some of the material that is specific to CNNs. I will be adding more posts regarding CNNs as I look into different topics along the way.</p>
+
+<h3 id="pooling-and-max-pooling">Pooling and Max Pooling</h3>
+<p>During training for text classification, sentences are converted into 2-D representations of text. These represenations take the form of matrices where each row represents a word and each column an embedding dimension. Kernels of different heights are passed over these matrices which then produce a lower dimensional output. The height of these kernels essentially represents n-gram length and help to capture local information which for text tends to correspond to syntactic relationships. One of the problems of these inputs and the results of kernel multiplication is that they can have hundreds of dimensions. In our case hundreds of columns that don’t necessarily add much to the model but increase computational complexity significantly. In order to mitigate this, pooling is used to downsample these matrices. Max pooling specifically is the process of running a smaller dimensional kernel over an input and taking the largest values from the space the kernel is going over. There are different versions of pooling such as average pooling but the general idea is the same.</p>
+
+<h3 id="example">Example:</h3>
+<p>In this example we have 4 x 4 matrix representing our input and 2 x 2 filter with a stride of 2. In each case you can see that the kernel results in a smaller matrix with the maximum values taken at each step.</p>
+
+<p><img src="/assets/MaxpoolSample2.png" alt="Convolution Example" /></p>
+
+<p>Source: https://computersciencewiki.org/index.php/Max-pooling_/_Pooling</p>
+:ET
