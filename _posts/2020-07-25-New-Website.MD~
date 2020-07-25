@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "REST Architecture Review"
+date:   2020-04-08 
+categories: Web Services
+---
+
+# REST Architecture
+
+- Allow the manipulation of web service data that is in textua format
+- Uses predefined set of stateless operations
+
+### There are 6 guiding constraints for RESTful systems.
+
+#### Client-server architecture
+- Separate user interface from data storage
+  - Improves portability, scalability, and allows both components to evolve separately.
+  
+#### Statelessness
+- Each request made by the client has all the information needed to process the request.
+- No information is needed to be stored on the server between requests
+- Single states are passed between different serverside services
+- Clients requests are _in transition_ while they are waiting to become the current state
+
+#### Cacheability
+- Clients and intermediares can cache responses
+- Responses must define their cacheability
+
+#### Layered system
+- Clients are unable to tell what part of the server they are connected to
+- Allows for proxies, shared caches, security
+
+#### Code on demand
+- Servers can change client functionality by enabling the use of executable code
+
+#### Uniform Interface
+- Constraints: 
+  - Resource Identifiaction in requests. Servers can give out different data formats(HTML, XML, JSON) that are requested by the client by identifers (URIs).
+- Resource manipulation through representations
+  - Representations passed to the client should be complete and allow modification
+- Self-descriptive messages
+  - Messages should also define how they should be processed
+- HATEOAS
+  - Hypermedia as the engine of application state
+  - Dynamic access of server data through hyperlinks
+  - REST application will have a root URI requests are made to. Responses in turn will provide new links or other actions that are available to the client.
